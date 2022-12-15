@@ -11,9 +11,9 @@
 	<br>
 	<p>Alterar GUIA:</p>
 	<s:form action="alterarGuia">
-		<p>ID#<s:property value="id" /></p>
-		<s:textfield name="guiaConsultado.nome" label="Nome"/>
-		<s:textfield name="guiaConsultado.cpf" label="CPF"/>
+		<s:textfield name="guiaConsultado.id" label="Id" />
+		<s:textfield name="guiaConsultado.nome" label="Nome" />
+		<s:textfield name="guiaConsultado.cpf" label="CPF" />
 		<s:submit value="ALTERAR" />
 	</s:form>
 	<s:form action="listarGuia">
