@@ -78,6 +78,7 @@ public class GuiaDAO {
 			if (rs.next()) {
 				guia.setCpf(rs.getString("cpf"));
 				guia.setNome(rs.getString("nome"));
+				guia.setId(rs.getString("id"));
 				return guia;
 			} else {
 				return null;
@@ -87,14 +88,14 @@ public class GuiaDAO {
 		}
 	}
 
-	public int alterar(String nome, String cpf, int id){
+	public int alterar(String nome, String cpf, String id){
 		int status;
 		try {
 			st = conn
 					.prepareStatement("UPDATE GUIA SET nome= ?, cpf=?  WHERE id= ?");
 			st.setString(1, nome);
 			st.setString(2, cpf);
-			st.setInt(3, id);
+			st.setString(3, id);
 			status = st.executeUpdate();
 			System.out.println("Alteração realizada");
 			return status;

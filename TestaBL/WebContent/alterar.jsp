@@ -9,8 +9,9 @@
 <body>
 	<s:include value="header.jsp" />
 	<br>
-	<p>Alterar GUIA de ID#<s:property value="id"/></p>	
+	<p>Alterar GUIA:</p>
 	<s:form action="alterarGuia">
+		<p>ID#<s:property value="id" /></p>
 		<s:textfield name="guiaConsultado.nome" label="Nome"/>
 		<s:textfield name="guiaConsultado.cpf" label="CPF"/>
 		<s:submit value="ALTERAR" />

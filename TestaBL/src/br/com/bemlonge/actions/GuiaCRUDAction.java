@@ -13,7 +13,6 @@ public class GuiaCRUDAction extends ActionSupport {
 	private String nome;
 	private String cpf;
 	private int id;
-	private int idConsultado;
 	List<Guia> listaGuias;
 	private Guia guiaConsultado;
 	
@@ -59,14 +58,6 @@ public class GuiaCRUDAction extends ActionSupport {
 		this.guiaConsultado = guiaConsultado;
 	}		
 
-	public int getIdConsultado() {
-		return idConsultado;
-	}
-
-	public void setIdConsultado(int idConsultado) {
-		this.idConsultado = idConsultado;
-	}
-
 	public String salvarGuia() throws ClassNotFoundException {
 		try {
 //			System.out.println("Nome: " + nome);
@@ -111,10 +102,10 @@ public class GuiaCRUDAction extends ActionSupport {
 	}
 	
 	public String alterarGuia() throws ClassNotFoundException {
-		try {			
+		try {	
 			GuiaDAO dao = new GuiaDAO();
 			dao.conectar();
-			dao.alterar(guiaConsultado.getNome(), guiaConsultado.getCpf(), idConsultado);
+			dao.alterar(guiaConsultado.getNome(), guiaConsultado.getCpf(), guiaConsultado.getId());
 			dao.desconectar();
 			return SUCCESS;
 		} catch (NullPointerException ex) {
