@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts  
+Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="default" extends="struts-default">
+		<action name="salvarGuia" class="br.com.bemlonge.actions.GuiaCRUDAction"
+			method="salvarGuia">
+			<result name="success">/sucesso.jsp</result>
+		</action>	
+		<action name="listarGuia" class="br.com.bemlonge.actions.GuiaCRUDAction"
+			method="listarGuia">
+			<result name="success">/listar.jsp</result>
+		</action>	
+		<action name="mostrarGuia" class="br.com.bemlonge.actions.GuiaCRUDAction"
+			method="mostrarGuia">
+			<result name="success">/alterar.jsp</result>
+		</action>
+		<action name="apagarGuia" class="br.com.bemlonge.actions.GuiaCRUDAction"
+			method="apagarGuia">
+			<result name="success">/sucesso.jsp</result>
+		</action>
+		<action name="alterarGuia" class="br.com.bemlonge.actions.GuiaCRUDAction"
+			method="alterarGuia">
+			<result name="success">/sucesso.jsp</result>
+		</action>
+	</package>
+</struts>  
