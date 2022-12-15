@@ -7,7 +7,7 @@ public class testaAlteracao {
 
 		GuiaDAO dao = new GuiaDAO();
 		dao.conectar();
-		dao.alterar("KKKKK", "11112",16);
+		dao.alterar("Rafael", "CPF", "1");
 		dao.desconectar();
 	}
 }

@@ -11,7 +11,7 @@
 	<br>
 	<p>Alterar GUIA:</p>
 	<s:form action="alterarGuia">
-		<s:textfield name="guiaConsultado.id" label="Id" />
+		<s:textfield name="guiaConsultado.id" readonly="true" label="Id" />
 		<s:textfield name="guiaConsultado.nome" label="Nome" />
 		<s:textfield name="guiaConsultado.cpf" label="CPF" />
 		<s:submit value="ALTERAR" />
